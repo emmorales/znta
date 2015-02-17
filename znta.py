@@ -123,7 +123,7 @@ def main():
     probGate  = applyLogNormal(muGate, modeGate, distGate)               # probability distribution around Brandenburg Gate
     
     # joint distribution
-    prob = probRiver * probSat * probGate
+    prob = probRiver * probSat * probGate                                # product since these are 3 independent events
     
     # find position of analyst
     maxindex = np.unravel_index(prob.argmax(), prob.shape)               # find the index of the largest value
